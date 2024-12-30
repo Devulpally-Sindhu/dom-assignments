@@ -1,0 +1,25 @@
+Name: <input type="text" [(ngModel)]="newStudent.name">
+<br>
+<br>
+Number: <input type="number" [(ngModel)]="newStudent.number">
+<br>
+<br>
+Email: <input type="text" [(ngModel)]="newStudent.email"> 
+<br>
+<br>
+Image: <input type="text" [(ngModel)]="newStudent.image">
+<br>
+<br>
+<button (click)="add()">Add Contact</button>
+<br>
+<br>
+<div style="border: 2px solid; width: 200px;margin-bottom: 20px;" *ngFor="let x of students">
+    image: <img [src]="x.image" width="100px" style="border-radius: 50%;">
+    <br>
+    name: <b>{{x.name}}</b>
+    <br>
+    number: <b>{{x.number}}</b>
+    <br>
+    email:  <b>{{x.email}}</b>
+    <br>
+</div>

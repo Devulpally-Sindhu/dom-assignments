@@ -1,0 +1,22 @@
+<div class="m-3">
+    <label>Fruit Name:</label>
+    <input type="text" class="form-control w-25 mb-2" [(ngModel)]="fruitName">
+    <label>Fruit Image:</label>
+    <input type="text" class="form-control w-25 mb-2" [(ngModel)]="fruitImage">
+    <label>Description</label>
+    <textarea class="form-control w-25 mb-2" [(ngModel)]="fruitDescription"></textarea>
+    <button class="btn btn-info mb-4" (click)="addFruit()" *ngIf="!editFlag">Add Fruit</button>
+    <button class="btn btn-primary mb-4" (click)="updateFruit()" *ngIf="editFlag">Update Fruit</button>
+
+    <div class="card w-25 mb-3 " *ngFor="let x of fruits;let i=index">
+        <div class="card-body">
+            <h2>{{x.name}}</h2>
+            <img [src]="x.image" width="290px">
+            <p>{{x.description}}</p>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-info" (click)="editFruit(i)">Edit</button>
+                <button class="btn btn-warning" (click)="deleteFruit(i)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

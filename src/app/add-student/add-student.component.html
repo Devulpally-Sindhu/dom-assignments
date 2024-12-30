@@ -1,0 +1,5 @@
+<input type="text" [(ngModel)]="newStudent">
+<button (click)="addStudent()" style="background-color: lightseagreen;">Add Student</button>
+<ul>
+    <li *ngFor="let x of students" style="color: red;">{{x}}</li>
+</ul>

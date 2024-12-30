@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="img">
+<br>
+<button (click)="addImage()">Add Image</button>
+<div *ngFor="let x of images" >
+    <img [src]="x" width="150px">
+</div>
